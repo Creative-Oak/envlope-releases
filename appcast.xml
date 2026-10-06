@@ -5,6 +5,22 @@
     <link>https://github.com/Creative-Oak/envlope-releases</link>
     <description>Envlope updates</description>
     <item>
+      <title>Envlope 1.7.1</title>
+      <pubDate>Tue, 06 Oct 2026 11:31:44 GMT</pubDate>
+      <sparkle:version>9</sparkle:version>
+      <sparkle:shortVersionString>1.7.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Fixes the window going blank in 1.7.</p>
+<h3>Fixed</h3>
+<ul>
+<li><b>Projects with a status card made the window go blank.</b> When a project showed a card (missing keys, or an env file that differs from the profile), the card's text could be measured far too tall, pushing the project view and the sidebar out of the window. Cards now wrap their text normally.</li>
+</ul>
+<h3>Install</h3>
+<p>Envlope 1.6 and 1.7 offer this update by themselves (or use Envlope → Check for Updates…). Otherwise download <b>Envlope-1.7.1.dmg</b> below and drag Envlope to Applications; your data stays. Requires macOS 14 or later (Apple silicon or Intel). Signed by Creative Oak ApS and notarized by Apple.</p>
+<p>SHA-256: <code>8107a5f8b9014c086e565fe6ab95cc6f19f8211cdf4d84f9c5635105e9566e54</code></p>]]></description>
+      <enclosure url="https://github.com/Creative-Oak/envlope-releases/releases/download/v1.7.1/Envlope-1.7.1.dmg" length="5849802" type="application/octet-stream" sparkle:edSignature="E+NC5U+JX+ajCHvKZxffsm5sKKuSwU9U5PO5eLEg716yai4xsnZ1YG/1bvon/+EOWe8mvx82XkL91eC74TP4AQ=="/>
+    </item>
+    <item>
       <title>Envlope 1.7</title>
       <pubDate>Tue, 06 Oct 2026 11:17:40 GMT</pubDate>
       <sparkle:version>8</sparkle:version>
