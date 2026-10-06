@@ -5,6 +5,22 @@
     <link>https://github.com/Creative-Oak/envlope-releases</link>
     <description>Envlope updates</description>
     <item>
+      <title>Envlope 1.8.1</title>
+      <pubDate>Tue, 06 Oct 2026 12:28:19 GMT</pubDate>
+      <sparkle:version>11</sparkle:version>
+      <sparkle:shortVersionString>1.8.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Envlope has an icon.</p>
+<h3>New</h3>
+<ul>
+<li><b>App icon.</b> An envelope-shaped cloud, closed with a lock. On macOS 26 it uses Liquid Glass; earlier versions get the same icon pre-rendered.</li>
+</ul>
+<h3>Install</h3>
+<p>Envlope 1.6 and later offer this update by themselves (or use Envlope → Check for Updates…). Otherwise download <b>Envlope-1.8.1.dmg</b> below and drag Envlope to Applications; your data stays. Requires macOS 14 or later (Apple silicon or Intel). Signed by Creative Oak ApS and notarized by Apple.</p>
+<p>SHA-256: <code>9a942d65b546bfb57e3e3d4cdf9ab6e640271e9ddfe516f4bca5edbd60595793</code></p>]]></description>
+      <enclosure url="https://github.com/Creative-Oak/envlope-releases/releases/download/v1.8.1/Envlope-1.8.1.dmg" length="5381951" type="application/octet-stream" sparkle:edSignature="YuXyAlxturWi6dy9MdGNbWwpDgwWrk2OvcBCdapwPxV2IFrBIp46Rveb5Khvvg/qjCQMupak+XQX7akIV74TBw=="/>
+    </item>
+    <item>
       <title>Envlope 1.8</title>
       <pubDate>Tue, 06 Oct 2026 12:06:14 GMT</pubDate>
       <sparkle:version>10</sparkle:version>
