@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Envlope</title>
+    <link>https://github.com/Creative-Oak/envlope-releases</link>
+    <description>Envlope updates</description>
+    <item>
+      <title>Envlope 1.6</title>
+      <pubDate>Tue, 06 Oct 2026 09:56:23 GMT</pubDate>
+      <sparkle:version>7</sparkle:version>
+      <sparkle:shortVersionString>1.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Envlope now updates itself, can back up everything to an encrypted file, and fixes a security problem in team projects shared outside their team. <b>Everyone should update; on 1.5 or older, download this version by hand.</b> From now on Envlope updates itself.</p>
+<h3>Security</h3>
+<ul>
+<li><b>Fixed: a teammate could make your Mac join a share they control</b> (introduced in 1.5). Through it, new personal variable sets could end up where they could read them. Envlope now only joins a project's share when it is exactly the project it claims to be and its owner is on the team, and never reads or writes a zone that merely has the same name as one of yours.</li>
+<li>People a project is shared with can change its contents, but not which team gets access to it.</li>
+<li>A team project whose owner leaves the team stops syncing for the team. If you're removed from a team, projects you had changed keep your edits as personal copies.</li>
+</ul>
+<h3>New</h3>
+<ul>
+<li><b>Automatic updates.</b> Envlope checks once a day and asks before installing. Updates are signed by Creative Oak and checked before anything is unpacked. See Settings → Updates.</li>
+<li><b>Backups.</b> File → Export Backup… saves every project, profile, value and variable set into one file, encrypted with a password you choose. Import Backup… adds what isn't on the Mac.</li>
+<li><b>Command line tools inside the app.</b> <code>envlope</code> and <code>envlope-mcp</code> now ship in Envlope.app and update with it. Install them from Settings → Command line and agents, which also copies the MCP config for your agent. If you copied the tools from an earlier DMG, install again and point your agent's MCP config to the new path.</li>
+<li><b>Welcome screen</b>, a notice when iCloud isn't signed in, and Help menu links to the guide and privacy policy.</li>
+<li><b>Newer versions are respected.</b> If another Mac saves data with a newer Envlope, this version leaves it alone and asks you to update, instead of overwriting it.</li>
+</ul>
+<h3>Install</h3>
+<p>Download <b>Envlope-1.6.dmg</b> below, open it and drag Envlope to Applications, over the old version; your data stays. Requires macOS 14 or later (Apple silicon or Intel). Signed by Creative Oak ApS and notarized by Apple.</p>
+<p>SHA-256: <code>2829757d211105bc15291590cf1176bc47f15523b16b7f38d7f347231421961b</code></p>]]></description>
+      <enclosure url="https://github.com/Creative-Oak/envlope-releases/releases/download/v1.6/Envlope-1.6.dmg" length="5270070" type="application/octet-stream" sparkle:edSignature="VY27NKZeogJBF/Lw+oe/HJt2EXTEFvVipKsK3y6ELR2Pq/68ti4Hgv9mDeD/JwzN0bpRxKME7zDYFpFH+jbNCQ=="/>
+    </item>
+  </channel>
+</rss>
