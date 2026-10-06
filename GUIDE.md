@@ -11,8 +11,6 @@
 - [What happens to your data when…](#what-happens-to-your-data-when)
 - [Variable sets](#variable-sets)
 - [Backups](#backups)
-- [The command line](#the-command-line)
-- [AI agents (MCP)](#ai-agents-mcp)
 - [Safety features](#safety-features)
 - [Troubleshooting](#troubleshooting)
 
@@ -75,8 +73,8 @@ value to keep. Nothing is overwritten silently.
 
 **Setting up another Mac:** install Envlope and sign in to the same iCloud account; your projects, teams and sets
 appear after the first sync. Then, per project, click **Choose folder…** to tell Envlope where it lives on that Mac.
-A few things are per Mac on purpose: folder links, the command line tools (install them again), always-allowed agent
-commands, approved risky values, and settings like extra file endings.
+A few things are per Mac on purpose: folder links, approved risky values, and settings like extra file endings and
+your editor.
 
 ## History
 
@@ -138,10 +136,14 @@ Env files in your project folders are never deleted or changed by any of this; o
 
 ## Variable sets
 
-A set is a group of variables several projects use, such as a Sentry DSN or shared AWS keys. Create and edit sets in
-**Settings → Variable sets**, and switch them on per profile with the **Sets** menu next to the profile picker. A
-profile's own values override a set's. Give a set to a team (the picker next to it in Settings) so the team's members
-get its variables too.
+A set is a group of variables several projects use, such as a Sentry DSN or shared AWS keys. **Settings** lists them by
+owner: **Only you** (synced to your own Macs) and one group per team (everyone on the team gets them). Create a set in
+the group it belongs to; the picker next to a set moves it. Switch sets on per profile with the **Sets** menu next to the
+profile picker. A team project offers that team's sets and your own.
+
+When you **Apply**, the env file is written fresh from one list: each switched-on set's variables first, under a
+`# From set "Sentry"` comment, then the profile's own under `# From "Local"`. If a set and the profile both have a key,
+the profile's value is written, under the profile. Envlope keeps the previous file, so Undo brings it back.
 
 ## Backups
 
@@ -152,52 +154,12 @@ encrypted with a password you choose. Envlope can't recover a forgotten password
 are. Everything comes back as your personal projects and sets (move them into a team again if you like), and you
 choose each project's folder again. iCloud is not a backup: a delete syncs to every Mac.
 
-## The command line
-
-**Settings → Command line and agents → Install…** links the `envlope` command into `/usr/local/bin` (if that needs an
-administrator, Envlope shows a command to paste into Terminal instead). The tools run from inside the app, so they're
-updated with it.
-
-```
-envlope list                      # projects and profiles
-envlope status                    # which profile is active, drift, missing keys
-envlope use <profile>             # write a profile to the env file (shows the changes, asks first)
-envlope diff [profile]            # compare the env file with a profile
-envlope capture <profile>         # store the env file into a profile
-envlope keys                      # key names of the active profile
-envlope get <KEY> [--reveal]      # one value (secrets only with --reveal)
-envlope undo                      # restore the previous env file (asks first)
-envlope run [-p project] -- <cmd> # run a command with the active profile; nothing written to disk
-```
-
-Run it from anywhere inside a project folder, or pass `-p <project>`. Scripts without a terminal must pass `--yes` to
-`use` and `undo`. The command line works with the data on your Mac; the app does the syncing.
-
-## AI agents (MCP)
-
-Envlope includes an MCP server, so AI coding agents can work with your environments without seeing your secrets. Copy
-the configuration from **Settings → Command line and agents → Copy MCP Config** into your agent's MCP settings. It
-looks like this:
-
-```json
-{ "mcpServers": { "envlope": { "command": "/Applications/Envlope.app/Contents/Helpers/envlope-mcp" } } }
-```
-
-Agents can list key names, see which keys are missing or out of date, and run commands with a profile's variables.
-**Every command needs your approval:** Envlope shows the exact command, project, profile and folder, and you choose
-**Deny**, **Allow Once** or **Always Allow This Command**. No answer within two minutes counts as Deny. Commands you
-always allow are listed, and can be removed, in Settings.
-
-A command that receives your secrets can do anything with them, so only allow commands you understand. Also stop
-agents reading `.env*` files directly, in your agent's own permission settings.
-
 ## Safety features
 
 - **Confirmation before writing:** nothing changes the env file without showing you the changes first.
 - **Variables that can run code:** values like `NODE_OPTIONS`, `DYLD_*`, `LD_PRELOAD`, `PATH`, `BASH_ENV` or
   `GIT_SSH_COMMAND` can make programs run code. When one of these was set by someone else (or another Mac) and you
-  haven't approved its value on this Mac, it's shown in full and must be confirmed before Envlope writes it or runs a
-  command with it.
+  haven't approved its value on this Mac, it's shown in full and must be confirmed before Envlope writes it.
 - **No symbolic links:** Envlope never reads or writes an env file that's a link to somewhere else.
 - **Private files:** env files Envlope writes are readable only by your user account.
 - **Recently deleted:** anything removed on this Mac or by sync stays restorable for 30 days.
@@ -211,6 +173,5 @@ agents reading `.env*` files directly, in your agent's own permission settings.
 - **A project you shared doesn't appear for someone:** they need to open the invitation link, be signed in to iCloud,
   and run Envlope 1.5 or later. Ask them to click **Sync**.
 - **"Update Envlope" in the sidebar:** someone saved data with a newer version. Use **Check for Updates…**.
-- **The command line can't read its data:** open the Envlope app once on this Mac first, so its Keychain key exists.
 - **Something else:** [open an issue](https://github.com/Creative-Oak/envlope-releases/issues). Please don't include
   any secret values.

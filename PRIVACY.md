@@ -1,9 +1,9 @@
 # Envlope privacy policy
 
-*Last updated: 6 October 2026*
+*Last updated: 6 October 2026 (1.8)*
 
 Envlope is made by Creative Oak ApS (Denmark). This policy explains what happens to your data when you use the Envlope
-Mac app, its command line tool (`envlope`) and its MCP server for AI agents (`envlope-mcp`).
+Mac app.
 
 **The short version: Creative Oak has no servers and receives none of your data.** Envlope keeps your environment
 variables on your Mac and, if you sync, in your own iCloud account. We don't collect analytics, crash reports or
@@ -37,14 +37,7 @@ Envlope connects to:
   (`github.com`). Like any website, GitHub receives your IP address, and the request includes Envlope's version
   number. Envlope sends nothing else. You can turn off automatic update checks in Settings → Updates.
 
-Envlope makes no other network connections. Commands you choose to run through Envlope (with `envlope run`, or an
-agent you approve) make whatever connections those programs make.
-
-## AI agents
-
-The MCP server runs on your Mac. It never gives an agent a secret value directly. When an agent asks to run a
-command with your variables, you see the exact command in Envlope and decide whether to allow it. A command you allow
-receives your variables and can do what it likes with them, so only allow commands you trust.
+Envlope makes no other network connections.
 
 ## Your choices
 

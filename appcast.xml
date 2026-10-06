@@ -5,6 +5,27 @@
     <link>https://github.com/Creative-Oak/envlope-releases</link>
     <description>Envlope updates</description>
     <item>
+      <title>Envlope 1.8</title>
+      <pubDate>Tue, 06 Oct 2026 12:06:14 GMT</pubDate>
+      <sparkle:version>10</sparkle:version>
+      <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Variable sets per team, and env files that show where values come from.</p>
+<h3>New</h3>
+<ul>
+<li><b>Variable sets by team.</b> Settings lists sets by owner: your own (synced to your Macs only), then one group per team (everyone on the team gets them). Create a set right in the group it belongs to; the picker next to a set moves it.</li>
+<li><b>Env files show their sets.</b> When you Apply a profile that uses variable sets, each set's variables are written under a <code># From set "Sentry"</code> comment, then the profile's own under <code># From "Local"</code>. If a set and the profile both have a key, the profile's value is written, under the profile.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><b>The command line tool and MCP server are no longer included</b> while they're being tested. If you installed them from 1.6 or 1.7, remove the links with <code>sudo rm /usr/local/bin/envlope /usr/local/bin/envlope-mcp</code>.</li>
+</ul>
+<h3>Install</h3>
+<p>Envlope 1.6 and later offer this update by themselves (or use Envlope → Check for Updates…). Otherwise download <b>Envlope-1.8.dmg</b> below and drag Envlope to Applications; your data stays. Requires macOS 14 or later (Apple silicon or Intel). Signed by Creative Oak ApS and notarized by Apple.</p>
+<p>SHA-256: <code>0f18ffe93eaf6e81595348e26e47eeb7f44b68a2b6e779cb1a5a103b7115dbc3</code></p>]]></description>
+      <enclosure url="https://github.com/Creative-Oak/envlope-releases/releases/download/v1.8/Envlope-1.8.dmg" length="3426895" type="application/octet-stream" sparkle:edSignature="PEYzxlj3rW1aZWn+NtnJK8KXp7CzIa/MO5jI6doG9pOIQZNHvSJU/Nu7f4g/ii4aY5Dkd9yXzxef955ZqgIjBw=="/>
+    </item>
+    <item>
       <title>Envlope 1.7.1</title>
       <pubDate>Tue, 06 Oct 2026 11:31:44 GMT</pubDate>
       <sparkle:version>9</sparkle:version>
