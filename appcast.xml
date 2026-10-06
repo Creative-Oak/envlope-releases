@@ -5,6 +5,34 @@
     <link>https://github.com/Creative-Oak/envlope-releases</link>
     <description>Envlope updates</description>
     <item>
+      <title>Envlope 1.7</title>
+      <pubDate>Tue, 06 Oct 2026 11:17:40 GMT</pubDate>
+      <sparkle:version>8</sparkle:version>
+      <sparkle:shortVersionString>1.7</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>History, nicknames, and clearer project status.</p>
+<p><i><b>Everyone sharing projects should update.</b> Projects saved by 1.7 carry history, which 1.6 would drop, so 1.6 leaves them alone and shows "Update Envlope" until it updates.</i></p>
+<h3>New</h3>
+<ul>
+<li><b>History.</b> The History button next to a project's folder lists every change to its profiles: who made it, when, and the value before and after (secret values stay masked until revealed). Restore puts an old value back. History syncs with the project, so everyone who has it sees the same list.</li>
+<li><b>Nicknames.</b> Set yours in Settings → You. People you share with see it in their member lists and next to your changes in History.</li>
+<li><b>Link several projects at once.</b> Select several folders, drop a folder of projects (like ~/Developer), or use File → Link Projects in Folder…. Tick the ones you want and choose Personal or a team.</li>
+<li><b>Add a project straight to a team</b> with the + next to the team in the sidebar, or the "Add to" choice when linking.</li>
+<li><b>Linking is explained first.</b> Before a folder is linked, Envlope shows which files become profiles and which list the keys a profile should have. The files stay where they are.</li>
+<li><b>Open the env file</b> in your editor with the button next to the folder path. Choose the editor in Settings → Env files.</li>
+</ul>
+<h3>Clearer status</h3>
+<ul>
+<li><b>Missing keys</b> are checked against the matching example file (.env.local.example for Local, .env.example otherwise), and the warning says which file lists them. Add as Empty adds them for you to fill in.</li>
+<li><b>When the env file doesn't match the profile</b>, a card says how many keys differ and how. Compare lists them grouped as different values, only in the file and only in Envlope, with Apply and Capture right there.</li>
+<li><b>Capture</b> now shows the changes and asks first, like Apply, since the profile syncs to everyone who has the project.</li>
+</ul>
+<h3>Install</h3>
+<p>Envlope 1.6 offers this update by itself (or use Envlope → Check for Updates…). Otherwise download <b>Envlope-1.7.dmg</b> below and drag Envlope to Applications; your data stays. Requires macOS 14 or later (Apple silicon or Intel). Signed by Creative Oak ApS and notarized by Apple.</p>
+<p>SHA-256: <code>447896038fe51d19e3f50548c2a44c5abdd30f10b60a606d1eb36a92db655457</code></p>]]></description>
+      <enclosure url="https://github.com/Creative-Oak/envlope-releases/releases/download/v1.7/Envlope-1.7.dmg" length="5848546" type="application/octet-stream" sparkle:edSignature="L8Dyh64c1vitxOkgCzWEO7xQuktqQXUkJJDmYOfyBiwaIyA/6h2fBtI4DcXF9O4sxcPW576RABJdVe/xhm25DA=="/>
+    </item>
+    <item>
       <title>Envlope 1.6</title>
       <pubDate>Tue, 06 Oct 2026 09:56:23 GMT</pubDate>
       <sparkle:version>7</sparkle:version>

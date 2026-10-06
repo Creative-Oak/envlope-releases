@@ -4,6 +4,7 @@
 - [Projects and profiles](#projects-and-profiles)
 - [Writing the env file](#writing-the-env-file)
 - [Sync between your Macs](#sync-between-your-macs)
+- [History](#history)
 - [Sharing a project](#sharing-a-project)
 - [Teams](#teams)
 - [Sharing a team project with someone outside the team](#sharing-a-team-project-with-someone-outside-the-team)
@@ -31,9 +32,16 @@ older versions leave that data alone and show **Update Envlope** in the sidebar 
 
 A **project** is one codebase. A **profile** is one environment of it: Development, Staging, Production and so on.
 
-- **Add a project:** drop the project's folder (or a single `.env` file) anywhere on the window, or use **File → Add
-  Project or .env File…**. Each `.env`, `.env.local` or `.env.<name>` file becomes a profile. A file like
-  `.env.example` becomes the list of keys every profile should have; missing ones are flagged in red.
+- **Link a project:** drop the project's folder anywhere on the window, or use **File → Link Project Folder…** (or the
+  **+** next to a team, to put it straight into that team). Envlope first shows what it will do: it links the folder
+  and keeps an encrypted copy of each `.env`, `.env.local` or `.env.<name>` file as a profile. The files stay where they
+  are and aren't changed. Dropping a single env file onto an existing project adds it as another profile.
+- **Several at once:** select several folders, drop a folder that holds projects (like `~/Developer`), or use **File →
+  Link Projects in Folder…**. Envlope lists the unlinked project folders it finds (two levels down), you tick the ones
+  you want and choose Personal or a team.
+- **Example files:** `.env.example`-style files list the keys a profile should have. `.env.local.example` applies to the
+  Local profile, `.env.example` to the rest. If a profile lacks some, a card says which keys and which file lists them,
+  and **Add as Empty** adds them for you to fill in.
 - **Other file names:** add more endings (for example `.secrets`) in **Settings → Extra env file endings**.
 - **Edit:** click a name or value to change it, and press Return. Values are secret by default and shown as dots; the eye
   reveals one value. Switch **Secret** off for values that aren't (a port, a log level). Add variables in the last row.
@@ -48,8 +56,11 @@ A **project** is one codebase. A **profile** is one environment of it: Developme
   uses). First you see every variable that will be added, changed or removed, and nothing is written until you click
   **Write .env**.
 - **Undo** puts back the env file as it was before the last write (and asks first too). Undo can itself be undone.
-- **Capture** goes the other way: it stores what's in the env file now into the selected profile.
-- **Diff** compares the env file with the profile.
+- **Capture** goes the other way: it stores what's in the env file now into the selected profile. It shows the changes
+  first too, since the profile syncs to everyone who has the project.
+- When the env file doesn't match the profile, a card says how many keys differ; **Compare…** (or **Diff**) lists them
+  grouped as different values, only in the file, and only in Envlope, with Apply and Capture right there.
+- **Open .env** (next to the folder path) opens the file in your editor. Choose the editor in **Settings → Env files**.
 - If the env file isn't ignored by Git, a banner offers to add it to `.gitignore`.
 - The **menu bar** icon applies a profile without opening the window (with the same confirmation).
 
@@ -61,6 +72,21 @@ syncs right away, and **Settings → Sync automatically** turns background synci
 
 Changes to different variables merge without asking. If the same variable was changed in two places, Envlope asks which
 value to keep. Nothing is overwritten silently.
+
+**Setting up another Mac:** install Envlope and sign in to the same iCloud account; your projects, teams and sets
+appear after the first sync. Then, per project, click **Choose folder…** to tell Envlope where it lives on that Mac.
+A few things are per Mac on purpose: folder links, the command line tools (install them again), always-allowed agent
+commands, approved risky values, and settings like extra file endings.
+
+## History
+
+**History** (next to the folder path) lists every change to a project's profiles: who made it, when, and the value
+before and after (secret values stay masked until you reveal them). **Restore** puts an old value back, recorded as a
+new change. History syncs with the project, so everyone who has it sees the same list. Envlope keeps the last 400
+changes from the past year per project.
+
+Set your **nickname** in **Settings → You**. It's shown to the people you share with, in their member lists and next
+to your changes in History. (Without one, they see what iCloud shares about you, sometimes just an email address.)
 
 ## Sharing a project
 
